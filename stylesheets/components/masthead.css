@@ -1,1 +1,92 @@
-/* Your code here */
+.masthead {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-gap: 10px;
+    padding: 20px 40px;
+    border-bottom: 1px solid lightgray;
+    align-items: center;
+}
+
+.masthead__menu-and-search {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.masthead__menu-icon, .masthead__search-icon {
+    font-size: 24px;
+    padding: 0 10px;
+}
+
+.masthead__actions {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    padding-right: 20px;
+}
+
+.masthead__gear-icon {
+    font-size: 20px;
+}
+
+.button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+.masthead__technologies {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+    text-align: center;
+}
+
+.masthead__date {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    font-size: 14px;
+    color: #666;
+    align-self: flex-start;
+}
+
+.masthead__logo {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.masthead__logo img {
+    max-height: 60px;
+}
+
+.masthead__paper {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    text-align: right;
+    font-size: 14px;
+    color: #666;
+    align-self: flex-start;
+}
+
+.masthead__paper i {
+    margin-right: 5px;
+}
+
+.masthead__date, .masthead__paper {
+    fontsize: 11px;
+    color: #999;
+}

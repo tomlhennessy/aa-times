@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     background-color: #f5f5f5;
-    padding: 15px 0;
+    padding: 10px 0;
     border-bottom: 1px solid #ddd;
 }
 
@@ -15,7 +15,6 @@
     padding: 0;
     margin: 0;
     flex-wrap: wrap;
-    gap: 10px;
 }
 
 .main-nav__item {
@@ -41,6 +40,12 @@
 @media (max-width: 768px) {
     .main-nav__item a {
         font-size: 10px;
-        padding: 5px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-nav {
+        display: none;
     }
 }

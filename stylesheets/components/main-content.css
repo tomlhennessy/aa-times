@@ -95,12 +95,40 @@
     font-size: 1.2em;
 }
 
-@media (max-width: 768px) {
+/* Hide the sidebar and make the main content take full width for medium screens */
+@media (max-width: 1200px) {
     .main-content {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* set a single column layout */
+    }
+
+    .main-content__sidebar {
+        display: none /* hide the sidebar */
     }
 
     .main-content__bottom {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* make bottom section full width */
+    }
+}
+
+
+@media (max-width: 600px) {
+    .main-content {
+        padding: 10px; /* reduce padding */
+    }
+
+    .article {
+        padding: 15px; /* adjust article padding */
+    }
+
+    .article__title {
+        font-size: 1.2em; /* decrease title font size */
+    }
+
+    .article__subtitle {
+        font-size: 1em; /* decrease subtitle font size */
+    }
+
+    .article__author {
+        font-size: 0.8em; /* decrease author font size */
     }
 }

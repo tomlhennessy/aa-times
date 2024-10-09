@@ -1,27 +1,33 @@
 window.addEventListener('DOMContentLoaded', () => {
   console.log('event-handling.js script was successfully loaded');
 
-  // select the gear icon element
+  // Toggle the dropdown menu when the gear icon is clicked (from Phase 6)
   const cogIcon = document.querySelector('.fas.fa-cog');
-
-  // toggle dropdown menu on gear icon click
   cogIcon.addEventListener('click', event => {
-    console.log('Gear clicked');
-    event.stopPropagation(); // prevent the event from bubbling up
+    event.stopPropagation();
     document.querySelector('.pref').classList.remove('pref--hidden');
   });
 
-  // hide the dropdown when clicking outside
+  // Hide dropdown menu when clicking outside of it
   window.addEventListener('click', () => {
-    console.log('HTML document clicked');
     document.querySelector('.pref').classList.add('pref--hidden');
   });
 
-  // additional logic for search modal toggle (not related to dropdown)
+  // Select the search icon and search modal
   const searchIcon = document.querySelector('.fa.fa-search');
-  searchIcon.addEventListener('click', () => {
+  const searchModal = document.querySelector('.search-modal');
+
+  // Toggle the search modal visibility when the search icon is clicked
+  searchIcon.addEventListener('click', (event) => {
     console.log('Search clicked');
-    const modal = document.querySelector('.search-modal');
-    modal.classList.toggle('search-modal--hidden');
+    event.stopPropagation(); // Prevent event from bubbling up
+    searchModal.classList.toggle('search-modal--hidden'); // Toggle the class
+  });
+
+  // Hide search modal when clicking outside of it
+  window.addEventListener('click', () => {
+    if (!searchModal.classList.contains('search-modal--hidden')) {
+      searchModal.classList.add('search-modal--hidden');
+    }
   });
 });

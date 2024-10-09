@@ -1,3 +1,9 @@
+/* gear-dropdown.css */
+
+.pref--hidden {
+  display: none;
+}
+
 .pref {
   background-color: white;
   border: 1px solid #efefef;
